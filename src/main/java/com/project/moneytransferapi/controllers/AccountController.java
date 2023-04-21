@@ -17,7 +17,7 @@ public class AccountController {
     }
 
     @PostMapping("/api/accounts")
-    public Account registerNewAccount(@RequestBody Account newAccount) {
+    public Account registerNewAccount(@RequestBody Account newAccount) throws Exception{
         return accountService.createAccount(newAccount);
     }
 }

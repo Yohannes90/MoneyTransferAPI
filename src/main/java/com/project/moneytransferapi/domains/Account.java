@@ -3,13 +3,11 @@ package com.project.moneytransferapi.domains;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
 
 @Data
 @Entity
-@RequiredArgsConstructor
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
