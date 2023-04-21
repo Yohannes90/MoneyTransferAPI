@@ -1,0 +1,39 @@
+###
+POST http://localhost:8080/
+
+{
+"
+
+###
+GET http://localhost:8080/api/v1/student
+
+###
+DELETE http://localhost:8080/1}
+
+###
+POST http://localhost:8080/api/v1/student
+Content-Type: application/json
+
+{
+  "name" : "yohannes",
+  "dob" : "01/01/1997",
+  "email" : "kjsld@gmail.com",
+  "age" : "26"
+}
+###
+GET http://localhost:8080/api/v1/student
+
+###
+POST http://localhost:8080/api/accounts
+Content-Type: application/json
+
+{
+  "firstName" : "kebede",
+  "lastName" : "chala",
+  "dateOfBirth" : "1990-01-01",
+  "phoneNumber" : "0911676754",
+  "email" : "kebee@gmail.com",
+  "pin" : 1234
+}
+
+
