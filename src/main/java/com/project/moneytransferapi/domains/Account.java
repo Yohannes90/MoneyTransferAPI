@@ -3,11 +3,13 @@ package com.project.moneytransferapi.domains;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
 
 @Data
 @Entity
+@RequiredArgsConstructor
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -38,14 +40,13 @@ public class Account {
     private String email;
 
     @NotNull(message = "Pin must be set")
-    @Size(max = 6, min = 4, message = "Pin must be 4 to 6 digits")
     @Column(nullable = false)
     private Integer pin;
 
-    @Column(nullable = false)
-    private Double Balance;
+    @Column
+    private Double Balance = 0.0;
 
-    @Column(nullable = false)
-    private LocalDate openingDate;
+    @Column
+    private LocalDate openingDate = LocalDate.now();
 
 }
